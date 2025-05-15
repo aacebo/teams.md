@@ -10,11 +10,15 @@ on:
 permissions: read-all
 
 jobs:
-  build:
+  build-and-deploy:
     name: Build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     permissions:
-      contents: read
+      contents: write # To push a branch
+      pages: write # To push to a GitHub Pages site
+      id-token: write # To update the deployment status
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
@@ -25,3 +29,12 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'build'
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
