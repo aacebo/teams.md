@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # 🤖 AI
 
 The AI packages in this library are designed to make it easier to build applications with LLMs.

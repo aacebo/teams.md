@@ -1,4 +1,5 @@
 ---
-sidebar_position: 2
-title: In Depth Guides
+sidebar_position: 3
 ---
+
+# In-Depth Guides

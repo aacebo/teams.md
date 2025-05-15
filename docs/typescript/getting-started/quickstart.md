@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Quickstart
 
 Get started with Teams AI Library (v2) quickly using the Teams CLI.
@@ -22,7 +26,7 @@ npm install -g @microsoft/teams.cli@preview
 
 > [!NOTE]
 >
-> _The [Teams CLI](../developer-tools/cli/README.md) is a command-line tool that helps you create and manage Teams applications. It provides a set of commands to simplify the development process._<br /><br />
+> _The [Teams CLI](/developer-tools/cli) is a command-line tool that helps you create and manage Teams applications. It provides a set of commands to simplify the development process._<br /><br />
 > After installation, you can run `teams --version` to verify the installation.
 
 ## Creating Your First Agent
@@ -92,19 +96,19 @@ When the application starts, you'll see:
 1. An http server starting up (on port 3000). This is the main server which handles incoming requests and serves the agent application.
 2. A devtools server starting up (on port 3001). This is a developer server that provides a web interface for debugging and testing your agent quickly, without having to deploy it to Teams.
 
-Let's navigate to the devtools server. Open your browser and head to [http://localhost:3001/devtools](http://localhost:3001/devtools/README.md). You should see a simple interface where you can interact with your agent. Send it a message!
+Let's navigate to the devtools server. Open your browser and head to [http://localhost:3001/devtools](http://localhost:3001/devtools). You should see a simple interface where you can interact with your agent. Send it a message!
 
 ![devtools](/screenshots/devtools-echo-chat.png)
 
 ## Next steps
 
-Now that you have your first agent running, learn about [the code basics](code-basics.md) to understand its components and structure.
+Now that you have your first agent running, learn about [the code basics](code-basics) to understand its components and structure.
 
-Otherwise, if you want to run your agent in Teams, check out the [Running in Teams](running-in-teams.md) guide.
+Otherwise, if you want to run your agent in Teams, check out the [Running in Teams](running-in-teams) guide.
 
 ## Resources
 
-- [Teams CLI documentation](../developer-tools/cli)
-- [Teams DevTools documentation](../developer-tools/devtools)
+- [Teams CLI documentation](/developer-tools/cli)
+- [Teams DevTools documentation](/developer-tools/devtools)
 - [Teams manifest schema](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema)
 - [Teams sideloading](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)

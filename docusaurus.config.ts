@@ -44,6 +44,7 @@ const config: Config = {
           routeBasePath: '/',
           path: 'docs/main',
           sidebarPath: './sidebars.ts',
+          sidebarCollapsed: false,
           editUrl:
             'https://github.com/microsoft/teams-ai/tree/v2-preview/teams.md/',
         },
@@ -62,6 +63,7 @@ const config: Config = {
         path: 'docs/typescript',
         routeBasePath: '/typescript',
         sidebarPath: './sidebars.ts',
+        sidebarCollapsed: true,
       } satisfies Partial<DocsPlugin.PluginOptions>,
     ],
     [
@@ -71,6 +73,7 @@ const config: Config = {
         path: 'docs/csharp',
         routeBasePath: '/csharp',
         sidebarPath: './sidebars.ts',
+        sidebarCollapsed: true,
       } satisfies Partial<DocsPlugin.PluginOptions>,
     ],
   ],
