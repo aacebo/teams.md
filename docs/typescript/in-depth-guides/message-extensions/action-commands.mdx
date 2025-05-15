@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import FileCodeBlock from '@site/src/components/FileCodeBlock';
+
 # Action commands
 
 Action commands allow you to present your users with a modal pop-up called a dialog in Teams. The dialog collects or displays information, processes the interaction, and sends the information back to Teams compose box.
@@ -30,7 +32,7 @@ See the [Invoke Locations](https://learn.microsoft.com/en-us/microsoftteams/plat
 
 To use action commands you have define them in the Teams app manifest. Here is an example:
 
-<!-- langtabs-start -->
+
 ```json
 "composeExtensions": [
     {
@@ -89,7 +91,7 @@ To use action commands you have define them in the Teams app manifest. Here is a
     }
 ]
 ```
-<!-- langtabs-end -->
+
 
 Here we are defining three different commands:
 
@@ -109,45 +111,40 @@ Here we are defining three different commands:
 
 Handle submission when the `createCard` or `getMessageDetails` actions commands are invoked.
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/index.snippet.message-ext-submit.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/index.snippet.message-ext-submit.ts"
+/>
 
 `createCard()` function
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/card.snippet.message-ext-create-card.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/card.snippet.message-ext-create-card.ts"
+/>
 
 `createMessageDetailsCard()` function
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/card.snippet.message-ext-create-message-details-card.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/card.snippet.message-ext-create-message-details-card.ts"
+/>
 
 ## Handle opening adaptive card dialog
 
 Handle opening adaptive card dialog when the `fetchConversationMembers` command is invoked.
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/index.snippet.message-ext-open.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/index.snippet.message-ext-open.ts"
+/>
 
 `createConversationMembersCard()` function
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/card.snippet.message-ext-create-conversation-members-card.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/card.snippet.message-ext-create-conversation-members-card.ts"
+/>
 
 ## Resources
 

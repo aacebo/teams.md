@@ -45,8 +45,7 @@ const config: Config = {
           path: 'docs/main',
           sidebarPath: './sidebars.ts',
           sidebarCollapsed: false,
-          editUrl:
-            'https://github.com/microsoft/teams-ai/tree/v2-preview/teams.md/',
+          editUrl: 'https://github.com/microsoft/teams-ai/tree/v2-preview/teams.md/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -64,6 +63,7 @@ const config: Config = {
         routeBasePath: '/typescript',
         sidebarPath: './sidebars.ts',
         sidebarCollapsed: true,
+        editUrl: 'https://github.com/microsoft/teams-ai/tree/v2-preview/teams.md/',
       } satisfies Partial<DocsPlugin.PluginOptions>,
     ],
     [
@@ -74,6 +74,7 @@ const config: Config = {
         routeBasePath: '/csharp',
         sidebarPath: './sidebars.ts',
         sidebarCollapsed: true,
+        editUrl: 'https://github.com/microsoft/teams-ai/tree/v2-preview/teams.md/',
       } satisfies Partial<DocsPlugin.PluginOptions>,
     ],
   ],
@@ -83,6 +84,9 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      respectPrefersColorScheme: true
+    },
     announcementBar: {
       backgroundColor: '#515cc6',
       isCloseable: true,
@@ -147,7 +151,7 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Microsoft Corporation. All rights reserved.`,
     },
     prism: {
-      theme: prismThemes.vsDark,
+      theme: prismThemes.github,
       darkTheme: prismThemes.vsDark,
       additionalLanguages: [
         'typescript', 'javascript',

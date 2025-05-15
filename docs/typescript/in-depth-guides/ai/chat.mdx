@@ -2,6 +2,8 @@
 sidebar_position: 2
 ---
 
+import FileCodeBlock from '@site/src/components/FileCodeBlock';
+
 # 💬 Chat Generation
 
 Before going through this guide, please make sure you have completed the [setup and prerequisites](./setup-and-prereqs.md) guide.
@@ -42,17 +44,15 @@ Chat generation is the the most basic way of interacting with an LLM model. It i
 
 Import the relevant objects:
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/index.snippet.ai-imports.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/index.snippet.ai-imports.ts"
+/>
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/index.snippet.simple-chat.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/index.snippet.simple-chat.ts"
+/>
 
 :::note
 The current `OpenAIChatModel` implementation uses chat-completions API. The responses API is coming soon.
@@ -66,10 +66,9 @@ LLMs can take a while to generate a response, so often streaming the response le
 Streaming is only currently supported for single 1:1 chats, and not for groups or channels.
 :::
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/index.snippet.streaming-chat.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/index.snippet.streaming-chat.ts"
+/>
 
 ![Streaming the response](/screenshots/streaming-chat.gif)

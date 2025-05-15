@@ -15,7 +15,7 @@ This is an advanced guide. It is highly recommended that you are familiar with [
 :::
 
 :::warning
-User authentication does not work with the developer tools setup. You have to run the app in Teams. Follow these [instructions](../../getting-started/running-in-teams.md#debugging-in-teams) to run your app in Teams.
+User authentication does not work with the developer tools setup. You have to run the app in Teams. Follow these [instructions](../../getting-started/running-in-teams#debugging-in-teams) to run your app in Teams.
 :::
 
 ## Setup Instructions
@@ -32,11 +32,11 @@ In this template, `graph` is the default name of the OAuth connection, but you c
 
 Use your terminal to run the following command: 
 
-<!-- langtabs-start -->
+
 ```sh
 teams new oauth-app --template graph
 ```
-<!-- langtabs-end -->
+
 
 This command:
 1. Creates a new directory called `oauth-app`.
@@ -47,16 +47,16 @@ This command:
 
 Open your terminal with the `oauth-app/` folder set as the current working directory and run the following command:
 
-<!-- langtabs-start -->
+
 ```sh
 teams config add ttk.oauth
 ```
-<!-- langtabs-end -->
+
 
 This will add relevant Teams Toolkit files to your project.
 
 :::tip
-See [App Setup](./setup.md#using-teams-toolkit-with-the-teams-cli) to learn more about what this command does.
+See [App Setup](./setup#using-teams-toolkit-with-the-teams-cli) to learn more about what this command does.
 :::
 
 ## Interacting with the app in Teams
@@ -66,7 +66,7 @@ Once you have successfully sideloaded the app into Teams you can now interact wi
 ### Signing the user in
 
 :::note
-This is the Single Sign-On (SSO) authentication flow. To learn more about all the available flows and their differences see the [How Auth Works](auth-sso.md) guide.
+This is the Single Sign-On (SSO) authentication flow. To learn more about all the available flows and their differences see the [How Auth Works](auth-sso) guide.
 :::
 
 When the user sends a message to the user a consent form will popup:

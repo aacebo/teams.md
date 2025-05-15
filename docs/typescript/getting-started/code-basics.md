@@ -29,7 +29,7 @@ Let's break down the simple application we created in the [quickstart](quickstar
 
 The heart of your application is the `App` class. This class handles all incoming activities and manages your application's lifecycle. It also acts as a way to host your application service.
 
-<!-- langtabs-start -->
+
 ```typescript
 import { App } from '@microsoft/teams.apps';
 import { ConsoleLogger } from '@microsoft/teams.common/logging';
@@ -39,7 +39,7 @@ const app = new App({
   plugins: [new DevtoolsPlugin()],
 });
 ```
-<!-- langtabs-end -->
+
 
 The app configuration includes a variety of options that allow you to customize its behavior, including controlling the underlying server, authentication, and other settings. For simplicity's sake, let's focus on plugins.
 
@@ -56,14 +56,14 @@ DevTools is a plugin that should only be used in development mode. It should not
 
 Teams applications respond to various types of activities. The most basic is handling messages:
 
-<!-- langtabs-start -->
+
 ```typescript
 app.on('message', async ({ send, activity }) => {
   await send({ type: 'typing' });
   await send(`you said "${activity.text}"`);
 });
 ```
-<!-- langtabs-end -->
+
 
 This code:
 
@@ -79,13 +79,13 @@ Type safety is a core tenet of this version of the SDK. You can change the activ
 
 Your application starts when you run:
 
-<!-- langtabs-start -->
+
 ```typescript
 (async () => {
   await app.start();
 })();
 ```
-<!-- langtabs-end -->
+
 
 This part initializes your application server and, when configured for Teams, also authenticates it to be ready for sending and receiving messages.
 

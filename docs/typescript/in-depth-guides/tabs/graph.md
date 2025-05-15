@@ -9,7 +9,7 @@ The client App exposes a `graph` property that gives type-safe access to  Micros
 ## Invoking Graph functions
 After constructing and starting an App instance, you can invoke any graph function by using the `app.graph` client.
 
-<!-- langtabs-start -->
+
 ```typescript
 import { App } from '@microsoft/teams.client';
 
@@ -18,7 +18,7 @@ await app.start();
 
 const top10Chats = await app.graph.chats.list( { $top: 10 });
 ```
-<!-- langtabs-end -->
+
 
 For best result, it's wise to ensure that the user has consented to a permission required by the graph API before attempting to invoke it. Otherwise, the call is likely to be rejected by the graph server.
 
@@ -38,7 +38,7 @@ The method returns a promise that resolves to true if the user has already provi
 
 This method is useful for building an incremental, just-in-time, consent model, or to fully control how consent is pre-warmed.
 
-<!-- langtabs-start -->
+
 ```typescript
 import { App } from '@microsoft/teams.client';
 
@@ -59,13 +59,13 @@ if (canReadChat) {
   // ... do something useful ...
 }
 ```
-<!-- langtabs-end -->
+
 
 #### Testing for consent without prompting
 The app also provides a `hasConsentForScopes` method to test for consent without raising a prompt. This is handy to enable or disable features based on user choice, or to provide friendly messaging before raising a prompt with `ensureConsentForScopes`.
 
 
-<!-- langtabs-start -->
+
 ```typescript
 import { App } from '@microsoft/teams.client';
 
@@ -85,7 +85,7 @@ if (canReadChat) {
   // ... do something useful ...
 }
 ```
-<!-- langtabs-end -->
+
 
 
 ## References

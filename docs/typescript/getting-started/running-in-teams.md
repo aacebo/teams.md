@@ -76,7 +76,7 @@ When debugging starts, the Teams Toolkit will:
 
 If you set up TTK via the Teams AI CLI, you should see something like the following in your terminal:
 
-<!-- langtabs-start -->
+
 ```sh
 [nodemon] 3.1.9
 [nodemon] to restart at any time, enter `rs`
@@ -87,7 +87,7 @@ If you set up TTK via the Teams AI CLI, you should see something like the follow
 [INFO] @teams/app/http listening on port 3978 🚀
 [INFO] @teams/app/devtools available at http://localhost:3979/devtools
 ```
-<!-- langtabs-end -->
+
 
 ## Testing your agent
 

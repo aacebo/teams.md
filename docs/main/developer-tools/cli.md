@@ -59,11 +59,9 @@ Use command line `teams new --help` to see the latest options for all optional p
 
 An existing project may also have the appropriate Teams Toolkit configuration files added by configuration name.
 
-<!-- langtabs-start -->
 ```bash
 teams config add <config-name>
 ```
-<!-- langtabs-end -->
 
 | Configuration | Description |
 |--------------|-------------|
@@ -78,8 +76,6 @@ Using this command will include
 
 ## Remove Teams Toolkit configuration files
 
-<!-- langtabs-start -->
 ```bash
 teams config remove <config-name>
 ```
-<!-- langtabs-end -->

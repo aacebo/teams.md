@@ -2,7 +2,9 @@
 sidebar_position: 4
 ---
 
-# Keeping state
+import FileCodeBlock from '@site/src/components/FileCodeBlock';
+
+# Keeping State
 
 By default, LLMs are not stateful. This means that they do not remember previous messages or context when generating a response.
 It's common practice to keep state of the conversation history in your application and pass it to the LLM each time you make a request.
@@ -20,16 +22,14 @@ To avoid this, you need to get messages from your persistent (or in-memory) stor
 The `ChatPrompt` class will modify the messages object that's passed into it. So if you want to manually manage it, you need to make a copy of the messages object before passing it in.
 :::
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/stateful-prompts.snippet.stateful-prompts-state-initialization.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/stateful-prompts.snippet.stateful-prompts-state-initialization.ts"
+/>
 
-<!-- langtabs-start -->
-```typescript
-{{#include ../../../generated-snippets/ts/stateful-prompts.snippet.stateful-prompts-example.ts }}
-```
-<!-- langtabs-end -->
+<FileCodeBlock
+    lang="typescript"
+    src="/generated-snippets/ts/stateful-prompts.snippet.stateful-prompts-example.ts"
+/>
 
 ![Stateful Chat Example](/screenshots/stateful-chat-example.png)
