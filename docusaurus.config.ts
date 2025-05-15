@@ -10,10 +10,10 @@ const config: Config = {
   favicon: 'img/msft-logo-48x48.png',
 
   // Set the production url of your site here
-  url: 'https://aacebo.github.io/teams.md/',
+  url: 'https://aacebo.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/teams.md/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -37,7 +37,7 @@ const config: Config = {
 
   scripts: [
     {
-      src: '/scripts/clarity.js',
+      src: 'scripts/clarity.js',
       async: false
     }
   ],
@@ -69,7 +69,7 @@ const config: Config = {
         path: 'docs/typescript',
         routeBasePath: '/typescript',
         sidebarPath: './sidebars.ts',
-        sidebarCollapsed: true,
+        sidebarCollapsed: false,
         editUrl: 'https://github.com/microsoft/teams-ai/tree/v2-preview/teams.md/',
       } satisfies Partial<DocsPlugin.PluginOptions>,
     ],
@@ -80,7 +80,7 @@ const config: Config = {
         path: 'docs/csharp',
         routeBasePath: '/csharp',
         sidebarPath: './sidebars.ts',
-        sidebarCollapsed: true,
+        sidebarCollapsed: false,
         editUrl: 'https://github.com/microsoft/teams-ai/tree/v2-preview/teams.md/',
       } satisfies Partial<DocsPlugin.PluginOptions>,
     ],
