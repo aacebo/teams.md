@@ -1,10 +1,11 @@
+import path from 'node:path';
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type * as DocsPlugin from '@docusaurus/plugin-content-docs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
+const baseUrl = '/teams.md/';
 const config: Config = {
   title: 'Teams AI Library (v2)',
   favicon: 'img/msft-logo-48x48.png',
@@ -13,7 +14,7 @@ const config: Config = {
   url: 'https://aacebo.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/teams.md/',
+  baseUrl,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -36,10 +37,7 @@ const config: Config = {
   },
 
   scripts: [
-    {
-      src: '/scripts/clarity.js',
-      async: false
-    }
+    path.join(baseUrl, '/scripts/clarity.js')
   ],
 
   presets: [
