@@ -147,7 +147,7 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Microsoft Corporation. All rights reserved.`,
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.vsDark,
       darkTheme: prismThemes.vsDark,
       additionalLanguages: [
         'typescript', 'javascript',

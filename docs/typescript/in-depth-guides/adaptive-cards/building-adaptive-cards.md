@@ -72,8 +72,9 @@ const card = new AdaptiveCard().withBody(cardJson);
 
 This method leverages the full Adaptive Card schema and ensures that the payload adheres strictly to `IAdaptiveCard`.
 
-> [!TIP]
-> You can use a combination of raw JSON and builder helpers depending on whatever you find easier.
+:::tip
+You can use a combination of raw JSON and builder helpers depending on whatever you find easier.
+:::
 
 ---
 

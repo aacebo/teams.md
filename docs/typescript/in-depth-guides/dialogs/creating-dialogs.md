@@ -4,8 +4,9 @@ sidebar_position: 1
 
 # Creating Dialogs
 
-> [!TIP]
-> If you're not familiar with how to build Adaptive Cards, check out [the cards guide](../adaptive-cards). Understanding their basics is a prerequisite for this guide.
+:::tip
+If you're not familiar with how to build Adaptive Cards, check out [the cards guide](../adaptive-cards). Understanding their basics is a prerequisite for this guide.
+:::
 
 ## Entry Point
 
@@ -50,8 +51,9 @@ You can render an Adaptive Card in a dialog by returning a card response.
 ```
 <!-- langtabs-end -->
 
-> [!IMPORTANT]
-> The action type for submitting a dialog must be `Action.Submit`. This is a requirement of the Teams client. If you use a different action type, the dialog will not be submitted and the agent will not receive the submission event.
+:::info
+The action type for submitting a dialog must be `Action.Submit`. This is a requirement of the Teams client. If you use a different action type, the dialog will not be submitted and the agent will not receive the submission event.
+:::
 
 ### Rendering A Webpage
 

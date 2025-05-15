@@ -8,8 +8,9 @@ sidebar_position: 1
 
 Use the lightweight DevTools app that allows you to test chat functionality with your agent without the need to sideload into Teams. This is useful for testing and debugging.
 
-> [!NOTE]
-> We plan to add more features to DevTools for a wider variety of testing. Stay tuned!
+:::note
+We plan to add more features to DevTools for a wider variety of testing. Stay tuned!
+:::
 
 ## Using DevTools
 
@@ -29,8 +30,9 @@ $: npm install @microsoft/teams.dev@preview
 
 In your app's main file, ensure DevTools plugin is added to the app.
 
-> [!CAUTION]
-> DevTools is not secure and should not be used in production environments. Remove the plugin before deploying your app to production.
+:::warning
+DevTools is not secure and should not be used in production environments. Remove the plugin before deploying your app to production.
+:::
 
 <!-- langtabs-start -->
 ```typescript
@@ -56,8 +58,9 @@ When you run your app, for example `npm run dev`, devtools will be running on po
 ```
 <!-- langtabs-end -->
 
-> [!NOTE]
+:::note
 > If you used the [CLI](../cli) to create a TTK configuration for your app, DevTools will run on port 3979 when you launch the debugger.
+:::
 
 When you open the page, you will see a Teams-like chat window and you can immediately interact with your agent.
 
@@ -74,8 +77,9 @@ Below is a brief list of the terminology used in the chat window and in Teams:
 
 The chat window emulates Teams features as closely as possible. Not all Teams features are available in DevTools, but we are working to add more features over time. The following capabilities are available:
 
-> [!IMPORTANT]
-> Accessibility and keyboard navigation is not fully supported in DevTools. Full support for all users is important to us, and we will prioritize acessibility in future preview releases.
+:::info
+Accessibility and keyboard navigation is not fully supported in DevTools. Full support for all users is important to us, and we will prioritize acessibility in future preview releases.
+:::
 
 ### Send messages
 
@@ -85,8 +89,9 @@ You can send messages to your agent just like in Teams. In the compose box, type
 
 Attach up to 10 files to your message using the Attach (paperclip) button. DevTools supports pasting an Adaptive Card JSON or attaching a card from the card designer. See the [Cards page](./cards) for more.
 
-> [!NOTE]
-> More attachments support is coming soon!
+:::note
+More attachments support is coming soon!
+:::
 
 ### Connectivity
 
@@ -118,8 +123,9 @@ If your agent is using streaming, DevTools will render messages as a stream with
 
 Send feedback to your app by clicking the Feedback (thumbs up/down) buttons in the message actions menu and completing the dialog form.
 
-> [!NOTE]
-> The capabilities above will also populate activities to the Activities page, where you can inspect activity payloads and see the full activity history.
+:::note
+The capabilities above will also populate activities to the Activities page, where you can inspect activity payloads and see the full activity history.
+:::
 
 ### Developer message shortcut
 

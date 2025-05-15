@@ -22,5 +22,6 @@ Then, when you want to send a proactive message, you can retrieve the `conversat
 ```
 <!-- langtabs-end -->
 
-> [!TIP]
-> In this example, we show that we get the conversation id using one of the activity handlers. This is a good place to store the conversation id, but you can also do this in other places like when the user installs the app or when they sign in. The important thing is that you have the conversation id stored somewhere so you can use it later.
+:::tip
+In this example, we show that we get the conversation id using one of the activity handlers. This is a good place to store the conversation id, but you can also do this in other places like when the user installs the app or when they sign in. The important thing is that you have the conversation id stored somewhere so you can use it later.
+:::

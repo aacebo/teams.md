@@ -95,5 +95,6 @@ Card actions arrive as `card.action` activities in your app. These give you acce
 ```
 <!-- langtabs-end -->
 
-> [!NOTE]
-> The `data` values are not typed and come as `any`, so you will need to cast them to the correct type in this case.
+:::note
+The `data` values are not typed and come as `any`, so you will need to cast them to the correct type in this case.
+:::

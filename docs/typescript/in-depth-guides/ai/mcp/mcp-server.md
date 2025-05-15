@@ -13,8 +13,9 @@ Your plugin can be configured as follows:
 ```
 <!-- langtabs-end -->
 
-> [!NOTE]
+:::note
 > By default, the MCP server will be available at `/mcp` on your application. You can change this by setting the `transport.path` property in the plugin configuration.
+:::
 
 And included in the app like any other plugin:
 <!-- langtabs-start -->
@@ -23,8 +24,9 @@ And included in the app like any other plugin:
 ```
 <!-- langtabs-end -->
 
-> [!TIP]
-> Enabling mcp request inspection and the `DevtoolsPlugin` allows you to see all the requests and responses to and from your MCP server (similar to how the **Activities** tab works).
+:::tip
+Enabling mcp request inspection and the `DevtoolsPlugin` allows you to see all the requests and responses to and from your MCP server (similar to how the **Activities** tab works).
+:::
 
 ![MCP Server in Devtools](/screenshots/mcp-devtools.gif)
 

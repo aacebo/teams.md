@@ -80,8 +80,9 @@ When working with Teams, these are the key concepts. Keep in mind, this is a sim
 
 [DevTunnel](https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview) is a critical component that makes your locally running agent accessible to Teams. When you
 
-> [!NOTE]
-> DevTunnel is only one way of exposing your localling running service to the internet. Other tools like ngrok can also accomplish the same thing.
+:::info
+DevTunnel is only one way of exposing your localling running service to the internet. Other tools like ngrok can also accomplish the same thing.
+:::
 
 - Creates a secure public HTTPS endpoint that forwards to your local server
 - Manages SSL certificates automatically
@@ -107,8 +108,9 @@ Before your agent can interact with Teams, it needs to be properly registered an
 
 Sideloading is the process of installing your agent in Teams. You are able to pass in the manifest and icons (zipped up) to the Teams client. Sideloading an application automatically makes that application available to you. You are also able to sideload the application in a Team or a Group chat. In this case, the application will be available to all members of that Team or Group chat.
 
-> [!IMPORTANT]
-> Sideloading needs to be enabled in your tenant. If this is not the case, then you will need to contact your Teams administrator to enable it.
+:::warning
+Sideloading needs to be enabled in your tenant. If this is not the case, then you will need to contact your Teams administrator to enable it.
+:::
 
 ## Provisioning and Deployment
 

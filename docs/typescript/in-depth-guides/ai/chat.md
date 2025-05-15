@@ -54,15 +54,17 @@ Import the relevant objects:
 ```
 <!-- langtabs-end -->
 
-> [!NOTE]
-> The current `OpenAIChatModel` implementation uses chat-completions API. The responses API is coming soon.
+:::note
+The current `OpenAIChatModel` implementation uses chat-completions API. The responses API is coming soon.
+:::
 
 ## Streaming chat responses
 
 LLMs can take a while to generate a response, so often streaming the response leads to a better, more responsive user experience.
 
-> [!IMPORTANT]
-> Streaming is only currently supported for single 1:1 chats, and not for groups or channels.
+:::warning
+Streaming is only currently supported for single 1:1 chats, and not for groups or channels.
+:::
 
 <!-- langtabs-start -->
 ```typescript

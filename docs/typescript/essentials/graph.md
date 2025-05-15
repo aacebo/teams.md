@@ -41,8 +41,9 @@ app.on('message', async ({ activity, userGraph }) => {
 
 Here, the `userGraph` object is a scoped graph client for the user that sent the message.
 
-> [!TIP]
-> You also have access to the `appGraph` object in the activity handler. This is equivalent to `app.graph`.
+:::tip
+You also have access to the `appGraph` object in the activity handler. This is equivalent to `app.graph`.
+:::
 
 ## The Graph Client
 
