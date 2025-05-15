@@ -107,12 +107,12 @@ const config: Config = {
       },
       items: [
         {
-          to: 'typescript/getting-started',
+          to: 'typescript',
           position: 'left',
           label: 'Typescript',
         },
         {
-          to: 'csharp/getting-started',
+          to: 'csharp',
           position: 'left',
           label: 'C#',
         },
