@@ -37,7 +37,7 @@ const config: Config = {
 
   scripts: [
     {
-      src: 'scripts/clarity.js',
+      src: '/scripts/clarity.js',
       async: false
     }
   ],
