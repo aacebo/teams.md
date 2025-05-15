@@ -35,6 +35,13 @@ const config: Config = {
     mermaid: true,
   },
 
+  scripts: [
+    {
+      src: '/scripts/clarity.js',
+      async: false
+    }
+  ],
+
   presets: [
     [
       'classic',
