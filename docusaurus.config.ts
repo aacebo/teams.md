@@ -10,10 +10,10 @@ const config: Config = {
   favicon: 'img/msft-logo-48x48.png',
 
   // Set the production url of your site here
-  url: 'https://aacebo.github.io/',
+  url: 'https://aacebo.github.io/teams.md/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/teams.md/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
