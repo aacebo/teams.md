@@ -1,5 +1,6 @@
 import { useEffect, useState, PropsWithChildren } from "react";
 import CodeBlock from "@theme/CodeBlock";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 export type FileCodeBlockParams = {
     readonly src: string;
@@ -8,11 +9,12 @@ export type FileCodeBlockParams = {
 
 export default function FileCodeBlock({ src, lang }: PropsWithChildren<FileCodeBlockParams>) {
     const [code, setCode] = useState<string>();
+    const url = useBaseUrl(src);
 
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(src);
+                const res = await fetch(url);
 
                 if (!res.ok || res.status != 200) {
                     throw new Error(`failed to load file code block with status "${res.status}"`);
