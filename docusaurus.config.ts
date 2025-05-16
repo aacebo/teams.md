@@ -53,7 +53,7 @@ const config: Config = {
           editUrl: 'https://github.com/microsoft/teams-ai/tree/v2-preview/teams.md/',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/custom.css', './src/css/code-blocks.css'],
         },
       } satisfies Preset.Options,
     ],
@@ -90,7 +90,7 @@ const config: Config = {
 
   themeConfig: {
     colorMode: {
-      respectPrefersColorScheme: true
+      respectPrefersColorScheme: true,
     },
     announcementBar: {
       backgroundColor: '#515cc6',
@@ -158,6 +158,32 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.vsDark,
+      magicComments: [
+        {
+          className: 'theme-code-block-highlighted-line',
+          line: 'highlight-next-line',
+          block: {
+            start: 'highlight-start',
+            end: 'highlight-end',
+          },
+        },
+        {
+          className: 'code-block-error-line',
+          line: 'highlight-error-line',
+          block: {
+            start: 'highlight-error-start',
+            end: 'highlight-error-end'
+          },
+        },
+        {
+          className: 'code-block-success-line',
+          line: 'highlight-success-line',
+          block: {
+            start: 'highlight-success-start',
+            end: 'highlight-success-end'
+          },
+        },
+      ],
       additionalLanguages: [
         'typescript', 'javascript',
         'csharp', 'python', 'bash',

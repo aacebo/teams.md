@@ -1,0 +1,40 @@
+---
+sidebar_position: 4
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# User Authentication
+
+## BotBuilder
+
+<Tabs groupId="sending-activities">
+  <TabItem value="BotBuilder" default>
+    ```typescript showLineNumbers
+    import { TeamsActivityHandler } from 'botbuilder';
+
+    export class ActivityHandler extends TeamsActivityHandler {
+      constructor() {
+        super();
+        this.onMessage(async (context) => {
+          // highlight-next-line
+          await context.sendActivity('hello world');
+        });
+      }
+    }
+    ```
+  </TabItem>
+  <TabItem value="Teams AI">
+    ```typescript
+      app.on('message', async ({ send }) => {
+        // highlight-error-line
+    -   await send('hello world');
+        // highlight-success-line
+    +   await send('test');
+      });
+    ```
+  </TabItem>
+</Tabs>
+
+## Teams AI
