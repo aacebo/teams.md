@@ -5,7 +5,10 @@ sidebar_position: 3
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# The Api Client
+# The API Client
+
+BotBuilder exposes a static class `TeamsInfo` that allows you to query the api. In Teams AI
+we pass an instance of our `ApiClient` into all our activity handlers.
 
 <Tabs groupId="sending-activities">
   <TabItem value="Diff" default>
@@ -16,14 +19,18 @@ import TabItem from '@theme/TabItem';
 -    ConfigurationBotFrameworkAuthentication,
 -    TeamsInfo,
 -  } from 'botbuilder';
+  // highlight-error-end
   // highlight-success-line
 +  import { App } from '@microsoft/teams.apps';
 
+  // highlight-error-start
 -  const auth = new ConfigurationBotFrameworkAuthentication(process.env);
 -  const adapter = new CloudAdapter(auth);
+  // highlight-error-end
   // highlight-success-line
 +  const app = new App();
 
+  // highlight-error-start
 -  export class ActivityHandler extends TeamsActivityHandler {
 -    constructor() {
 -      super();
@@ -32,12 +39,12 @@ import TabItem from '@theme/TabItem';
 -      });
 -    }
 -  }
+  // highlight-error-end
   // highlight-success-start
 +  app.on('message', async ({ api, activity }) => {
 +    const members = await api.conversations.members(activity.conversation.id).get();
 +  });
   // highlight-success-end
-  // highlight-error-end
   ```
   </TabItem>
   <TabItem value="BotBuilder">
