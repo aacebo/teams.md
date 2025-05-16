@@ -78,14 +78,11 @@ If you set up TTK via the Teams AI CLI, you should see something like the follow
 
 
 ```sh
-[nodemon] 3.1.9
-[nodemon] to restart at any time, enter `rs`
-[nodemon] watching path(s): src/**
-[nodemon] watching extensions: ts
-[nodemon] starting `node -r ts-node/register -r dotenv/config ./src/index.ts`
-[WARN] @teams/app/devtools ⚠️  Devtools are not secure and should not be used production environments ⚠️
-[INFO] @teams/app/http listening on port 3978 🚀
-[INFO] @teams/app/devtools available at http://localhost:3978/devtools
+[INFO] Microsoft.Hosting.Lifetime Now listening on: http://localhost:3978
+[WARN] Echo.Microsoft.Teams.Plugins.AspNetCore.DevTools ⚠️  Devtools are not secure and should not be used production environments ⚠️
+[INFO] Echo.Microsoft.Teams.Plugins.AspNetCore.DevTools Available at http://localhost:3978/devtools
+[INFO] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[INFO] Microsoft.Hosting.Lifetime Hosting environment: Development
 ```
 
 
