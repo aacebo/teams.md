@@ -67,9 +67,9 @@ You may also stream messages to the user which can be useful for long messages, 
     [Message]
     public void OnMessage([Context] MessageActivity activity, [Context] IStreamer stream)
     {
-        stream.Emit('hello');
-        stream.Emit(', ');
-        stream.Emit('world!');
+        stream.Emit("hello");
+        stream.Emit(", ");
+        stream.Emit("world!");
         // result message: "hello, world!"
     }
     ```
@@ -78,9 +78,9 @@ You may also stream messages to the user which can be useful for long messages, 
     ```csharp 
     app.OnMessage(async context =>
     {
-        context.Stream.emit('hello');
-        context.Stream.emit(', ');
-        context.Stream.emit('world!');
+        context.Stream.Emit("hello");
+        context.Stream.Emit(", ");
+        context.Stream.Emit("world!");
         // result message: "hello, world!"
         return Task.CompletedTask;
     });
