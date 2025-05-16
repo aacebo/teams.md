@@ -53,7 +53,7 @@ Navigate to your new agent's directory:
 
 
 ```sh
-cd Quote.Agent
+cd Quote.Agent/Quote.Agent
 ```
 
 
