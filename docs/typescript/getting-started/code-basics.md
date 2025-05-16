@@ -30,7 +30,7 @@ Let's break down the simple application we created in the [quickstart](quickstar
 The heart of your application is the `App` class. This class handles all incoming activities and manages your application's lifecycle. It also acts as a way to host your application service.
 
 
-```typescript
+```typescript title="src/index.ts"
 import { App } from '@microsoft/teams.apps';
 import { ConsoleLogger } from '@microsoft/teams.common/logging';
 import { DevtoolsPlugin } from '@microsoft/teams.dev';
@@ -57,7 +57,7 @@ DevTools is a plugin that should only be used in development mode. It should not
 Teams applications respond to various types of activities. The most basic is handling messages:
 
 
-```typescript
+```typescript title="src/index.ts"
 app.on('message', async ({ send, activity }) => {
   await send({ type: 'typing' });
   await send(`you said "${activity.text}"`);
@@ -80,7 +80,7 @@ Type safety is a core tenet of this version of the SDK. You can change the activ
 Your application starts when you run:
 
 
-```typescript
+```typescript title="src/index.ts"
 (async () => {
   await app.start();
 })();
