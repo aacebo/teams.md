@@ -18,9 +18,9 @@ Before diving in, let’s define a few key terms:
 flowchart LR
     Teams["Teams"]
     Server["App Server"]
-    AppEventHandlers["Event Handler (app.event())"]
+    AppEventHandlers["Event Handler (app.OnEvent())"]
     AppRouter["Activity Event Router"]
-    AppActivityHandlers["Activity Handlers (app.on())"]
+    AppActivityHandlers["Activity Handlers (app.OnActivity())"]
 
     Teams --> |Activity| Server
     Teams --> |Signed In| Server
