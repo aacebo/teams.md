@@ -8,7 +8,39 @@ import TabItem from '@theme/TabItem';
 # The Api Client
 
 <Tabs groupId="sending-activities">
-  <TabItem value="BotBuilder" default>
+  <TabItem value="Diff" default>
+  ```typescript
+  // highlight-error-start
+-  import {
+-    CloudAdapter,
+-    ConfigurationBotFrameworkAuthentication,
+-    TeamsInfo,
+-  } from 'botbuilder';
+  // highlight-success-line
++  import { App } from '@microsoft/teams.apps';
+
+-  const auth = new ConfigurationBotFrameworkAuthentication(process.env);
+-  const adapter = new CloudAdapter(auth);
+  // highlight-success-line
++  const app = new App();
+
+-  export class ActivityHandler extends TeamsActivityHandler {
+-    constructor() {
+-      super();
+-      this.onMessage(async (context) => {
+-        const members = await TeamsInfo.getMembers(context);
+-      });
+-    }
+-  }
+  // highlight-success-start
++  app.on('message', async ({ api, activity }) => {
++    const members = await api.conversations.members(activity.conversation.id).get();
++  });
+  // highlight-success-end
+  // highlight-error-end
+  ```
+  </TabItem>
+  <TabItem value="BotBuilder">
     ```typescript showLineNumbers
     import {
       CloudAdapter,
@@ -28,8 +60,6 @@ import TabItem from '@theme/TabItem';
         });
       }
     }
-
-
     ```
   </TabItem>
   <TabItem value="Teams AI">
