@@ -86,17 +86,17 @@ In the console, you should see a similar output:
 [nodemon] watching extensions: ts
 [nodemon] starting `node -r ts-node/register -r dotenv/config ./src/index.ts`
 [WARN] @teams/app/devtools ⚠️  Devtools are not secure and should not be used production environments ⚠️
-[INFO] @teams/app/http listening on port 3000 🚀
-[INFO] @teams/app/devtools available at http://localhost:3001/devtools
+[INFO] @teams/app/http listening on port 3978 🚀
+[INFO] @teams/app/devtools available at http://localhost:3979/devtools
 ```
 
 
 When the application starts, you'll see:
 
-1. An http server starting up (on port 3000). This is the main server which handles incoming requests and serves the agent application.
-2. A devtools server starting up (on port 3001). This is a developer server that provides a web interface for debugging and testing your agent quickly, without having to deploy it to Teams.
+1. An http server starting up (on port 3978). This is the main server which handles incoming requests and serves the agent application.
+2. A devtools server starting up (on port 3979). This is a developer server that provides a web interface for debugging and testing your agent quickly, without having to deploy it to Teams.
 
-Let's navigate to the devtools server. Open your browser and head to [http://localhost:3001/devtools](http://localhost:3001/devtools). You should see a simple interface where you can interact with your agent. Send it a message!
+Let's navigate to the devtools server. Open your browser and head to [http://localhost:3979/devtools](http://localhost:3979/devtools). You should see a simple interface where you can interact with your agent. Send it a message!
 
 ![devtools](/screenshots/devtools-echo-chat.png)
 

@@ -85,7 +85,7 @@ If you set up TTK via the Teams AI CLI, you should see something like the follow
 [nodemon] starting `node -r ts-node/register -r dotenv/config ./src/index.ts`
 [WARN] @teams/app/devtools ⚠️  Devtools are not secure and should not be used production environments ⚠️
 [INFO] @teams/app/http listening on port 3978 🚀
-[INFO] @teams/app/devtools available at http://localhost:3979/devtools
+[INFO] @teams/app/devtools available at http://localhost:3978/devtools
 ```
 
 
@@ -103,7 +103,7 @@ After the debugging session starts:
 Congratulations! Now you have a fully functional agent running in Microsoft Teams. Interact with it just like any other Teams app and explore the rest of the documentation to build more complex agents.
 
 :::tip
-If you want to monitor the activities and events in your app, you can still use the [DevTools plugin](/developer-tools/devtools)! Note that the DevTools server is running on port 3979. You can open it in your browser to interact with your agent and monitor activities in real time.
+If you want to monitor the activities and events in your app, you can still use the [DevTools plugin](/developer-tools/devtools)! Note that the DevTools server is running on port 3978. You can open it in your browser to interact with your agent and monitor activities in real time.
 :::
 
 ## Troubleshooting

@@ -43,13 +43,13 @@ const app = new App({
 });
 ```
 
-When you run your app, for example `npm run dev`, devtools will be running on port 3001
+When you run your app, for example `npm run dev`, devtools will be running on port 3979
 
 ```bash
 [nodemon] watching extensions: ts
 [nodemon] starting `node -r ts-node/register -r dotenv/config ./src/index.ts`
-[INFO] @samples/echo/http listening on port 3000 🚀
-[INFO] @samples/echo/devtools available at http://localhost:3001/devtools
+[INFO] @samples/echo/http listening on port 3978 🚀
+[INFO] @samples/echo/devtools available at http://localhost:3979/devtools
 ```
 
 :::info
