@@ -10,7 +10,7 @@ An **event** is a foundational concept in building agents — it represents some
 flowchart LR
     Teams["Teams"]:::less-interesting
     Server["App Server"]:::interesting
-    AppEventHandlers["Event Handler (app.event())"]:::interesting
+    AppEventHandlers["Event Handler (app.OnEvent())"]:::interesting
 
     Teams --> |Activity| Server
     Teams --> |Signed In| Server
@@ -40,20 +40,21 @@ Here are the events that you can start building handlers for:
 
 We can subscribe to errors that occur in the app.
 
-```typescript
-app.event('error', ({ err, log }) => {
-  log.error(err);
-  // Or Alternatively, send it to an observability platform
+```csharp
+app.OnError((sender, @event) =>
+{
+    // do something with the error
+    app.Logger.Info(@event.Exception.ToString());
 });
 ```
 
 ### Example 2
 
-When a user signs in using `OAuth` or `SSO`, use the graph api to fetch their profile and say hello.
+When an activity is received, log its `JSON` payload.
 
 ```typescript
-app.event('signin', async ({ activity, send, api }) => {
-  const me = await api.user.me.get();
-  await send(`👋 Hello ${me.name}`);
+app.OnActivity((sender, @event) =>
+{
+    app.Logger.Info(@event.Activity.ToString());
 });
 ```
